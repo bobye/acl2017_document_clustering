@@ -1,6 +1,6 @@
 # Utilities related to D2 Clustering for Document Data
 
-This repository includes python 2.7 scripts that process a document dataset file into .d2s format that is ready for applying software package **d2_kmeans**. The clustering result provided by **d2_kmeans** is then evaluated by different metrics. The utilities involved are used for generating part of the results reported in the following paper:
+This repository includes python 2.7 scripts that process a document dataset file into .d2s format that is ready for applying software package **d2_kmeans**. The clustering result provided by **d2_kmeans** is then evaluated by different metrics. The utilities involved were used for generating part of the results reported in the following paper:
 
 [Jianbo Ye](http://personal.psu.edu/jxy198), Yanran Li, Zhaohui Wu, James Z. Wang, Wenjie Li, Jia Li, Determining Gains Acquired from Word Embedding Quantitatively Using Discrete Distribution Clustering, Proceedings of The Annual Meeting of the Association for Computational Linguistics (ACL), Vancouver, Canada, July 2017. Long paper.
 
@@ -41,10 +41,34 @@ average words: 22
 (1983, 4849)
 ```
 
-It creates two files: `story_cluster.d2s` and `story_cluster.d2s.vocab0`. At this point, you need to request a patent protected C/MPI software called ``d2_kmeans`` from the author to process the formated data (free academic license available). The software will take these two files are input and output clustering labels as a file named `story_cluster.label_o` in the same directory. Type the same command again to evaluate the result. 
+It creates two files: `story_cluster.d2s` and `story_cluster.d2s.vocab0`. At this point, you need to request a patent protected C/MPI software called **d2_kmeans** from the author to process the formated data (free academic license available). The software will take these two files are input and output clustering labels as a file named `story_cluster.d2s_[xxxxxx].label_o` in the same directory. Type the same command again to evaluate the result that was reported in the paper. 
 
 ```
 $ python export_d2s.py
 ```
+
+
+----
+The MIT License (MIT)
+
+Copyright (c) 2017 Jianbo Ye
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 
