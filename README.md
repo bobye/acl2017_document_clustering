@@ -1,6 +1,9 @@
 # Utilities related to D2 Clustering for Document Data
 
-This repository includes python 2.7 scripts that process a document dataset file into .d2s format that is ready for applying software package **d2_kmeans**. The clustering result provided by **d2_kmeans** is then evaluated by different metrics. The utilities involved were used for generating part of the results reported in the following paper:
+This repository includes python 2.7 scripts that process a document dataset file into .d2s format that is ready for applying software package **d2_kmeans**. The clustering result provided by **d2_kmeans** is then evaluated by different metrics. If you are interested in the software **d2_kmeans** and reproduce the results in the paper, please contact the author @JianboYe directly. 
+
+
+The utilities involved were used for generating part of the results reported in the following paper:
 
 [Jianbo Ye](http://personal.psu.edu/jxy198), Yanran Li, Zhaohui Wu, James Z. Wang, Wenjie Li, Jia Li, Determining Gains Acquired from Word Embedding Quantitatively Using Discrete Distribution Clustering, Proceedings of The Annual Meeting of the Association for Computational Linguistics (ACL), Vancouver, Canada, July 2017. Long paper.
 
