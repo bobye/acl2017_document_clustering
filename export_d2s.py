@@ -8,7 +8,7 @@ from gensim.corpora import MmCorpus
 
 import cPickle,os,re,codecs,sys,glob
 
-from categoricalClustDist_mosek import categorical_clust_dist,token_to_mat
+from categoricalClustDist import categorical_clust_dist,token_to_mat
 #from spelling_corrector import correct
 
 def extract_features(in_file='story_clusters.txt',features_file='feature_words.txt', filtered_category_list=[]):
@@ -115,7 +115,7 @@ def d2clustering_metrics(in_file='story_clusters.txt',in_label_file=None,filtere
     print 'Normalized Mutual Information: %0.3f' % metrics.normalized_mutual_info_score(labels, d2_labels)
     print 'Adjusted Mutual Information: %0.3f' % metrics.adjusted_mutual_info_score(labels, d2_labels)
     print 'Adjusted Rand Index: %0.3f' % metrics.adjusted_rand_score(labels, d2_labels)
-    print 'Categorical Cluster Distance: %0.3f' % categorical_clust_dist(token_to_mat(labels), token_to_mat(d2_labels), method='instance_count')['dist']
+    #print 'Categorical Cluster Distance: %0.3f' % categorical_clust_dist(token_to_mat(labels), token_to_mat(d2_labels), method='instance_count')['dist']
 
 
 if __name__ == '__main__':
@@ -130,13 +130,13 @@ if __name__ == '__main__':
     #dataset = '20newsclean'
     #dataset = 'ohsumed_sz25'
 
-    vec_dim = 300
-    #word_vecs='word2vec_400_10_10.bin'
-    word_vecs='glove_6B_300d.bin'
+    vec_dim = 400
+    word_vecs='word2vec_400_10_10.bin'
+    #word_vecs='glove_6B_300d.bin'
     #word_vecs='GoogleNews-vectors-negative300.bin'
     #word_vecs='ohsumed-full_50_20_2.8.bin'
     
-    cluster_file = dataset + '_clusters.txt'
+    cluster_file = 'acl2017dataset/' + dataset + '_clusters.txt'
     vec_dic = dataset + '_word_vecs.pkl'
 
     reuters_r10_categories = ['acq', 'crude', 'earn', 'coffee', 'interest', 'money-fx', 'money-supply', 'ship', 'trade', 'sugar']
