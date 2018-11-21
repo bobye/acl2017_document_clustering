@@ -44,12 +44,13 @@ average words: 22
 (1983, 4849)
 ```
 
-It creates two files: `story_cluster.d2s` and `story_cluster.d2s.vocab0`. At this point, you need to request a patent protected C/MPI software called **d2_kmeans** from the author to process the formated data (free academic license available). The software will take these two files are input and output clustering labels as a file named `story_cluster.d2s_[xxxxxx].label_o` in the same directory. Type the same command again to evaluate the result that was reported in the paper. 
+It creates two files: `story_cluster.d2s` and `story_cluster.d2s.vocab0`. At this point, you need to request a patent protected C/MPI software called [d2_kmeans](https://github.com/bobye/d2_kmeans). The software will take these two files are input and output clustering labels as a file named `story_cluster.d2s_[xxxxxx].label_o` in the same directory. Type the same command again to evaluate the result that was reported in the paper. 
 
 ```
 $ python export_d2s.py
 ```
 
+如果你想尝试重现文章中的结果，还可以看[这篇文章](https://zhuanlan.zhihu.com/p/50412488)。
 
 ----
 The MIT License (MIT)
